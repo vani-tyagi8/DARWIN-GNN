@@ -1,0 +1,24 @@
+seed: 42
+device: cpu
+data:
+  root: data/processed
+  dataset: devign_smoke
+  batch_size: 4
+  num_workers: 0
+model:
+  input_dim: 101
+  hidden_dim: 101
+  num_steps: 2
+  num_edge_types: 1
+training:
+  strategy: baseline
+  epochs: 1
+  learning_rate: 0.0001
+  weight_decay: 0.001
+  patience: 1
+  threshold: 0.5
+  focal_gamma: 2.0
+  focal_alpha: null
+  amp: false
+output_dir: runs
+
